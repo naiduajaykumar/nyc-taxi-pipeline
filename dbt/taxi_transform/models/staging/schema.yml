@@ -1,0 +1,41 @@
+# schema.yml
+version: 2
+
+models:
+  - name: stg_taxi_trips
+    description: "Cleaned and renamed NYC yellow taxi trips"
+    columns:
+      - name: vendor_id
+        description: "Taxi vendor (1=CMT, 2=VTS)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2, 6]
+
+      - name: pickup_at
+        description: "Trip pickup timestamp"
+        tests:
+          - not_null
+
+      - name: dropoff_at
+        description: "Trip dropoff timestamp"
+        tests:
+          - not_null
+
+      - name: payment_method
+        description: "Human-readable payment type"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["Credit card", "Cash", "No charge",
+                       "Dispute", "Unknown", "Other"]
+
+      - name: fare_amount
+        description: "Base metered fare — always positive after filter"
+        tests:
+          - not_null
+
+      - name: total_amount
+        description: "Total charged to passenger"
+        tests:
+          - not_null

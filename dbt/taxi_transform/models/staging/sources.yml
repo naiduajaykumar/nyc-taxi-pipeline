@@ -1,0 +1,19 @@
+# sources.yml tells dbt that raw.yellow_taxi_trips exists in PostgreSQL and can be used as a source in our dbt models. It also defines metadata about the source, such as descriptions and tests.
+version: 2
+sources:
+  - name: raw
+    database: taxi_warehouse
+    schema: raw
+    description: "Raw NYC Taxi data loaded by Python ingestion script"
+    tables:
+      - name: yellow_taxi_trips
+        description: "Raw trip records — one row per trip"
+        loaded_at_field: tpep_pickup_datetime
+        freshness:
+        warn_after: {count: 30, period: day}
+        error_after: {count: 60, period: day}
+        columns:
+          - name: tpep_pickup_datetime
+            tests: [not_null]
+          - name: tpep_dropoff_datetime
+            tests: [not_null]
