@@ -4,6 +4,7 @@ A production-grade end-to-end data engineering pipeline processing
 NYC Yellow Taxi trip data using Python, PostgreSQL, dbt, Great Expectations, and AWS S3.
 
 ## Architecture
+<img width="1837" height="724" alt="project1-dbt-dag" src="https://github.com/user-attachments/assets/59174006-0baa-40c8-b5f9-9ccbf5923274" />
 
 ```
 NYC Taxi Parquet Files (Public Dataset)
