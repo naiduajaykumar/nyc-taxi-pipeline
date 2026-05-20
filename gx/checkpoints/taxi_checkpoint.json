@@ -1,0 +1,12 @@
+{
+  "actions": [],
+  "id": "c4b2684c-9ecb-44c4-a505-7fdd01bcf4dc",
+  "name": "taxi_checkpoint",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "4cbd7147-f5e3-48be-9ad9-f96df06c6722",
+      "name": "taxi_validation_def"
+    }
+  ]
+}

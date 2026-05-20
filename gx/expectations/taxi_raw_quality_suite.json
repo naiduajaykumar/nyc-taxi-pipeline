@@ -1,0 +1,109 @@
+{
+  "expectations": [
+    {
+      "id": "e7ada7fa-683f-43b7-ac23-bb2632558caf",
+      "kwargs": {
+        "column": "tpep_pickup_datetime"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "018199c4-9f8b-4447-b694-023db8d1ef8c",
+      "kwargs": {
+        "column": "tpep_dropoff_datetime"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "4d4566c0-bdbb-4159-9fa4-f8de1430535e",
+      "kwargs": {
+        "column": "fare_amount"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "3a84dcd2-517e-4682-a865-06385f8af246",
+      "kwargs": {
+        "column": "passenger_count",
+        "max_value": 9.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "91c9c691-0f6b-4233-8246-70f1d8c161f2",
+      "kwargs": {
+        "column": "fare_amount",
+        "max_value": 1000.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "8971bd79-ad9d-4952-bc67-28ed49bda6a1",
+      "kwargs": {
+        "column": "trip_distance",
+        "max_value": 200.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "36c6169b-0605-4902-b3dd-aeb6b1cb811c",
+      "kwargs": {
+        "column": "payment_type",
+        "value_set": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    },
+    {
+      "id": "211ec440-e9f6-4c83-a186-fc26b68e9d4f",
+      "kwargs": {
+        "column": "total_amount",
+        "max_value": 5000.0,
+        "min_value": -500.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "d328ec6c-6e12-4c35-bdef-037b4570b347",
+      "kwargs": {
+        "max_value": 50000000,
+        "min_value": 1000
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_table_row_count_to_be_between"
+    }
+  ],
+  "id": "c4485df6-1840-464b-a508-e174ef81bef7",
+  "meta": {
+    "great_expectations_version": "1.17.2"
+  },
+  "name": "taxi_raw_quality_suite",
+  "notes": null
+}

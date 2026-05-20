@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "884bfef3-f3a5-449f-b731-4c798ea17a27",
+      "name": "yellow_taxi_trips"
+    },
+    "batch_definition": {
+      "id": "48c8b832-6179-46a7-a7ea-14b83c07e4ef",
+      "name": "whole_table"
+    },
+    "datasource": {
+      "id": "7094878a-590f-4526-b2c2-0f060793ffee",
+      "name": "postgres_taxi"
+    }
+  },
+  "id": "4cbd7147-f5e3-48be-9ad9-f96df06c6722",
+  "name": "taxi_validation_def",
+  "suite": {
+    "id": "c4485df6-1840-464b-a508-e174ef81bef7",
+    "name": "taxi_raw_quality_suite"
+  }
+}

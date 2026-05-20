@@ -8,3 +8,34 @@ logs/
 target/
 dbt_packages/
 data/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# dbt
+dbt/taxi_transform/target/
+dbt/taxi_transform/logs/
+dbt/taxi_transform/dbt_packages/
+
+# Great Expectations (generated output — not source code)
+gx/uncommitted/
+
+# AWS credentials — NEVER commit
+.aws/
+*.env
+.env
+
+# Database credentials — NEVER commit
+profiles.yml
+
+# Temp CSV exports
+*.csv
+
+# OS files
+.DS_Store
+Thumbs.db
